@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Layout from '../components/layout.jsx';
+import MainLayout from '../layouts/main.jsx';
 
 const Main = () => {
    return (
-      <Layout>
-         <h1>This app rules!</h1>
-         <p>Log in to find out why</p>
+      <MainLayout>
+         <h1>TODO: LOGIN/REGISTRY</h1>
+         <p>If you have already an account:</p>
          <Link to="/dashboard">Go to dashboard</Link>
-      </Layout>
+      </MainLayout>
    );
 };
 
