@@ -1,0 +1,8 @@
+[dev]
+    command = "npm run dev"
+    autoLaunch = true
+    
+[[redirects]]
+    from = '/dashboard/*'
+    to = '/dashboard'
+    status = 200
