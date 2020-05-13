@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
+import { IdentityContextProvider } from 'react-netlify-identity-widget';
 
 // eslint-disable-next-line react/prop-types
 const MainLayout = ({ children }) => (
-   <Fragment>
-      <div className="flex flex-col min-h-screen">
-         <header className="flex justify-around"></header>
-         <main className="flex items-center justify-center flex-1">
-            {children}
-         </main>
-      </div>
-   </Fragment>
+   <IdentityContextProvider url="https://app-ihealthybox.netlify.app">
+      <Fragment>
+         <div className="flex flex-col min-h-screen">
+            <main>{children}</main>
+         </div>
+      </Fragment>
+   </IdentityContextProvider>
 );
 
 export default MainLayout;

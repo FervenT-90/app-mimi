@@ -1,7 +1,11 @@
 import React from 'react';
 
 const RouteSettings = () => {
-   return <div>Hello from Settings</div>;
+   return (
+      <div className="flex items-center justify-center flex-1">
+         Hello from Settings
+      </div>
+   );
 };
 
 export default RouteSettings;
