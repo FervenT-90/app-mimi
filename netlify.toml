@@ -1,3 +1,6 @@
+[build]
+    command = "npm run build"
+    folder = "public"
 [dev]
     command = "npm run dev"
     autoLaunch = true
