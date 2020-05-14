@@ -11,3 +11,6 @@ node_modules
 
 # deployment-specific configs
 now.json
+
+# Local Netlify folder
+.netlify
