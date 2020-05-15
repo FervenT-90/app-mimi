@@ -3,3 +3,11 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+body {
+   background: linear-gradient(90deg, #fe9c42 0%, #7e21f5 100%);
+}
+
+.text-mimi-shadow {
+   text-shadow: 0.5px 0.5px 5px #222;
+}

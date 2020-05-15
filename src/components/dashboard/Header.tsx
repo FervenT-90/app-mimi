@@ -19,16 +19,28 @@ const Header: FC<Props> = ({ showLogin }) => {
    return identity && user && isLoggedIn ? (
       <nav className="flex items-center justify-around h-20 border-b-4 shadow-sm bg-black-mimi border-orange-mimi">
          <Link to="/" activeClassName="active">
-            <img className="focus:outline-none" src={logo} alt="iBoxLogo" />
+            <img className="focus:outline-none" src={logo} alt="iBox Logo" />
          </Link>
-         <div className="flex flex-col items-center">
-            <Link to="/dashboard/profile" activeClassName="active">
-               <img className="focus:outline-none" src={profileButton} alt="" />
-            </Link>
+
+         <Link
+            className="flex flex-col items-center"
+            to="/dashboard/profile"
+            activeClassName="underline text-orange-mimi"
+         >
+            <img
+               className="focus:outline-none"
+               src={profileButton}
+               alt="Profile Button"
+            />
             <span className="text-white">{name}</span>
-         </div>
+         </Link>
+
          <button onClick={showLogin}>
-            <img className="focus:outline-none" src={logout} alt="" />
+            <img
+               className="focus:outline-none"
+               src={logout}
+               alt="Logout Button"
+            />
          </button>
       </nav>
    ) : (
