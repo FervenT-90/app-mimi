@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const RouteSettings = () => {
+export const Settings: FC = () => {
    return (
       <div className="flex items-center justify-center flex-1">
          Hello from Settings
       </div>
    );
 };
-
-export default RouteSettings;

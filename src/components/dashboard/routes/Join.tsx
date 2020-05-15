@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const RouteJoin = () => {
+export const Join: FC = () => {
    return (
       <div className="flex items-center justify-center flex-1">
          Hello from Join
       </div>
    );
 };
-
-export default RouteJoin;

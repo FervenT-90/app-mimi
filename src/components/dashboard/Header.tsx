@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'gatsby';
-// eslint-disable-next-line import/no-unresolved
 import { useIdentityContext } from 'react-netlify-identity';
 
-// eslint-disable-next-line react/prop-types
-const HeaderDashboard = ({ showLogin }) => {
+interface Props {
+   showLogin: () => void;
+}
+
+const Header: FC<Props> = ({ showLogin }) => {
    const identity = useIdentityContext();
    const isLoggedIn = identity && identity.isLoggedIn;
    const user = identity && identity.user;
@@ -30,4 +32,4 @@ const HeaderDashboard = ({ showLogin }) => {
    );
 };
 
-export default HeaderDashboard;
+export default Header;

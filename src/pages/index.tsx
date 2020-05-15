@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import MainLayout from '../layouts/main.jsx';
+import MainLayout from '../layouts/main';
 
-const Main = () => {
+const Main: FC = () => {
    return (
       <MainLayout>
          <div>
