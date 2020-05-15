@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'gatsby';
-// eslint-disable-next-line import/no-unresolved
 import { useIdentityContext } from 'react-netlify-identity';
 
-const FooterDashboard = () => {
+const Footer: FC = () => {
    const identity = useIdentityContext();
    const isLoggedIn = identity && identity.isLoggedIn;
 
@@ -27,4 +26,4 @@ const FooterDashboard = () => {
    );
 };
 
-export default FooterDashboard;
+export default Footer;

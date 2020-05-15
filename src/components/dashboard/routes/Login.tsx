@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { navigate } from 'gatsby';
-// eslint-disable-next-line import/no-unresolved
 import { useIdentityContext } from 'react-netlify-identity';
 
-// eslint-disable-next-line react/prop-types
-const RouteLogin = ({ showLogin }) => {
+interface Props {
+   path: string;
+   showLogin: () => void;
+}
+
+export const Login: FC<Props> = ({ showLogin }) => {
    const identity = useIdentityContext();
    if (identity && identity.isLoggedIn) {
       navigate('/dashboard/join', { replace: true });
@@ -18,5 +21,3 @@ const RouteLogin = ({ showLogin }) => {
       </div>
    );
 };
-
-export default RouteLogin;

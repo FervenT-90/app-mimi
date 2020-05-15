@@ -1,0 +1,105 @@
+enum WorkoutStates {
+   BOOKED
+   CANCELED
+   COMPLETED
+}
+
+type User {
+   netlifyID: ID!
+   stripeID: ID!
+   active: Boolean
+   workouts: [UserWorkout]! @relation
+}
+
+type UserWorkout {
+   state: WorkoutStates!
+   rating: Int
+   date: Int
+   user: User!
+}
+
+type AdminWorkout {
+   startTime: String!
+   finishTime: String!
+   vacancies: Int!
+   finished: Boolean!
+   day: Day!
+   date: Int
+}
+
+type Year {
+   number: Int!
+   months: [Month!] @relation
+}
+
+type Month {
+   name: String!
+   number: Int!
+   year: Year!
+   days: [Day!] @relation
+}
+
+type Day {
+   name: String!
+   number: Int!
+   month: Month!
+   adminWorkouts: [AdminWorkout]! @relation
+}
+
+### CREATE A YEAR WITH 1 MONTH WITH WORKING DAYS MUTATION
+
+# mutation {
+#   createYear(
+#     data: {
+#       number: 2020
+#       months: {
+#         create: [
+#           {
+#             name: "Junio"
+#             number: 6
+#             days: {
+#               create: [
+#                 { name: "Lunes", number: 1 }
+#                 { name: "Martes", number: 2 }
+#                 { name: "Miércoles", number: 3 }
+#                 { name: "Jueves", number: 4 }
+#                 { name: "Viernes", number: 5 }
+#                 { name: "Lunes", number: 8 }
+#                 { name: "Martes", number: 9 }
+#                 { name: "Miércoles", number: 10 }
+#                 { name: "Jueves", number: 11 }
+#                 { name: "Viernes", number: 12 }
+#                 { name: "Lunes", number: 15 }
+#                 { name: "Martes", number: 16 }
+#                 { name: "Miércoles", number: 17 }
+#                 { name: "Jueves", number: 18 }
+#                 { name: "Viernes", number: 19 }
+#                 { name: "Lunes", number: 22 }
+#                 { name: "Martes", number: 23 }
+#                 { name: "Miércoles", number: 24 }
+#                 { name: "Jueves", number: 25 }
+#                 { name: "Viernes", number: 26 }
+#                 { name: "Lunes", number: 29 }
+#                 { name: "Martes", number: 30 }
+#               ]
+#             }
+#           }
+#         ]
+#       }
+#     }
+#   ){
+#     number
+#     months {
+#       data {
+#         number
+#         name
+#         days {
+#           data {
+#             name
+#             number
+#           }
+#         }
+#       }
+#     }
+#   }
+# }

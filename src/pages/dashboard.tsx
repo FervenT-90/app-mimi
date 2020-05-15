@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { navigate } from 'gatsby';
 import { Router } from '@reach/router';
-import MainLayout from '../layouts/main.jsx';
-import HeaderDashboard from '../components/HeaderDashboard.jsx';
-import FooterDashboard from '../components/FooterDashboard.jsx';
-import PrivateRoute from '../components/PrivateRoute.jsx';
-import RouteJoin from '../components/RouteJoin.jsx';
-import RouteWorkouts from '../components/RouteWorkouts.jsx';
-import RouteProfile from '../components/RouteProfile.jsx';
-import RouteSettings from '../components/RouteSettings.jsx';
-import RouteLogin from '../components/RouteLogin.jsx';
+import MainLayout from '../layouts/main';
+import Header from '../components/dashboard/Header';
+import PrivateRoute from '../components/PrivateRoute';
+
+import {
+   Join,
+   Workouts,
+   Profile,
+   Settings,
+   Login,
+} from '../components/dashboard/routes/index';
+
 import IdentityModal from 'react-netlify-identity-widget';
 import 'react-netlify-identity-widget/styles.css';
 
-// eslint-disable-next-line react/prop-types
+import Footer from '../components/dashboard/Footer';
+
 const Dashboard = ({ location }) => {
    const [isDialogVisible, setIsDialogVisible] = useState(false);
    const showLogin = () => setIsDialogVisible(true);
 
    useEffect(() => {
-      // eslint-disable-next-line react/prop-types
       if (location.pathname.match(/^\/dashboard\/?$/)) {
          navigate('/dashboard/login', { replace: true });
       }
@@ -27,29 +30,37 @@ const Dashboard = ({ location }) => {
    return (
       <MainLayout>
          <div className="flex flex-col min-h-screen">
-            <HeaderDashboard showLogin={showLogin} />
+            <Header showLogin={showLogin} />
             <div className="flex items-center justify-center flex-1">
                <Router>
-                  <PrivateRoute path="dashboard/join" component={RouteJoin} />
+                  <PrivateRoute
+                     path="dashboard/join"
+                     component={Join}
+                     location={Document.prototype.location}
+                  />
                   <PrivateRoute
                      path="dashboard/profile"
-                     component={RouteProfile}
+                     component={Profile}
+                     location={Document.prototype.location}
                   />
                   <PrivateRoute
                      path="dashboard/workouts"
-                     component={RouteWorkouts}
+                     component={Workouts}
+                     location={Document.prototype.location}
                   />
                   <PrivateRoute
                      path="dashboard/settings"
-                     component={RouteSettings}
+                     component={Settings}
+                     location={Document.prototype.location}
                   />
-                  <RouteLogin path="dashboard/login" showLogin={showLogin} />
+                  <Login path="dashboard/login" showLogin={showLogin} />
                </Router>
             </div>
-            <FooterDashboard />
+            <Footer />
             <IdentityModal
                showDialog={isDialogVisible}
                onCloseDialog={() => setIsDialogVisible(false)}
+               aria-label="Login"
             />
          </div>
       </MainLayout>
