@@ -12,13 +12,25 @@ const Footer: FC = () => {
    return identity && isLoggedIn ? (
       <div>
          <nav className="flex items-center justify-around h-16 text-white border-t-4 bg-black-mimi font-secondary border-orange-mimi">
-            <Link to="/dashboard/join" activeClassName="active">
+            <Link
+               className="pb-1"
+               to="/dashboard/join"
+               activeClassName="border-b-2 border-orange-mimi"
+            >
                <img src={joinSvg} alt="Join workout icon" />
             </Link>
-            <Link to="/dashboard/workouts" activeClassName="active">
+            <Link
+               className="pb-1"
+               to="/dashboard/workouts"
+               activeClassName="border-b-2 border-orange-mimi"
+            >
                <img src={myWorkoutsSvg} alt="My workout icon" />
             </Link>
-            <Link to="/dashboard/settings" activeClassName="active">
+            <Link
+               className="pb-1"
+               to="/dashboard/settings"
+               activeClassName="border-b-2 border-orange-mimi"
+            >
                <img src={settingsSvg} alt="Settings icon" />
             </Link>
          </nav>
