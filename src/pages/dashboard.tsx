@@ -33,25 +33,15 @@ const Dashboard = ({ location }) => {
             <Header showLogin={showLogin} />
             <div className="flex items-center justify-center flex-1">
                <Router>
-                  <PrivateRoute
-                     path="dashboard/join"
-                     component={Join}
-                     location={Document.prototype.location}
-                  />
-                  <PrivateRoute
-                     path="dashboard/profile"
-                     component={Profile}
-                     location={Document.prototype.location}
-                  />
+                  <PrivateRoute path="dashboard/join" component={Join} />
+                  <PrivateRoute path="dashboard/profile" component={Profile} />
                   <PrivateRoute
                      path="dashboard/workouts"
                      component={Workouts}
-                     location={Document.prototype.location}
                   />
                   <PrivateRoute
                      path="dashboard/settings"
                      component={Settings}
-                     location={Document.prototype.location}
                   />
                   <Login path="dashboard/login" showLogin={showLogin} />
                </Router>

@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, FunctionComponent } from 'react';
+import { RouteComponentProps } from '@reach/router';
 import { navigate } from 'gatsby';
 import { useIdentityContext } from 'react-netlify-identity';
 
-interface Props {
-   path: String;
-   component: React.FC;
-   location: Location;
+interface Props extends RouteComponentProps {
+   component: FunctionComponent;
 }
 
 const PrivateRoute: FC<Props> = ({
