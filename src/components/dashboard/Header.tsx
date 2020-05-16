@@ -4,7 +4,7 @@ import { useIdentityContext } from 'react-netlify-identity';
 import brand from '../../assets/svgs/brand.min.svg';
 import logo from '../../assets/svgs/logo.min.svg';
 import logout from '../../assets/svgs/logout.min.svg';
-import profileButton from '../../assets/svgs/ProfileButton.min.svg';
+import profileButton from '../../assets/images/avatar.png';
 
 interface Props {
    showLogin: () => void;
@@ -28,7 +28,7 @@ const Header: FC<Props> = ({ showLogin }) => {
             activeClassName="underline text-orange-mimi"
          >
             <img
-               className="focus:outline-none"
+               className="w-10 h-10 focus:outline-none"
                src={profileButton}
                alt="Profile Button"
             />
