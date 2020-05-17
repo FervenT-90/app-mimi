@@ -1,11 +1,20 @@
 [build]
     command = "npm run build"
     folder = "public"
+    functions = "functions"
 [dev]
     command = "npm run dev"
     autoLaunch = true
+    functions = "functions"
     
 [[redirects]]
     from = '/dashboard/*'
     to = '/dashboard'
     status = 200
+    force = true
+
+[[redirects]]
+    from = '/api/*'
+    to = '/.netlify/functions/:splat'
+    status = 200
+    force = true
