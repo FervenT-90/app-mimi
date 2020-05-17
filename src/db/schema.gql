@@ -46,6 +46,10 @@ type Day {
    adminWorkouts: [AdminWorkout]! @relation
 }
 
+type Query {
+   monthByNumber(number: Int!): Month!
+}
+
 ### CREATE A YEAR WITH 1 MONTH WITH WORKING DAYS MUTATION
 
 # mutation {
@@ -83,6 +87,35 @@ type Day {
 #                 { name: "Martes", number: 30 }
 #               ]
 #             }
+#           }
+#           {
+#             name: "Julio"
+#             number: 7
+#             days: {
+#               create: [
+#                 { name: "Lunes", number: 1 }
+#                 { name: "Martes", number: 2 }
+#                 { name: "Miércoles", number: 3 }
+#                 { name: "Jueves", number: 4 }
+#                 { name: "Viernes", number: 5 }
+#                 { name: "Lunes", number: 8 }
+#                 { name: "Martes", number: 9 }
+#                 { name: "Miércoles", number: 10 }
+#                 { name: "Jueves", number: 11 }
+#                 { name: "Viernes", number: 12 }
+#                 { name: "Lunes", number: 15 }
+#                 { name: "Martes", number: 16 }
+#                 { name: "Miércoles", number: 17 }
+#                 { name: "Jueves", number: 18 }
+#                 { name: "Viernes", number: 19 }
+#                 { name: "Lunes", number: 22 }
+#                 { name: "Martes", number: 23 }
+#                 { name: "Miércoles", number: 24 }
+#                 { name: "Jueves", number: 25 }
+#                 { name: "Viernes", number: 26 }
+#                 { name: "Lunes", number: 29 }
+#                 { name: "Martes", number: 30 }
+#               ]
 #           }
 #         ]
 #       }
