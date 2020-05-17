@@ -14,3 +14,6 @@ now.json
 
 # Local Netlify folder
 .netlify
+
+# Environment Variables
+.env
