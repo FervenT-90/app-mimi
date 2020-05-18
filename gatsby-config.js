@@ -20,5 +20,16 @@ module.exports = {
             ],
          },
       },
+      {
+         resolve: 'gatsby-source-graphql',
+         options: {
+            typeName: 'Fauna',
+            fieldName: 'fauna',
+            url: `${process.env.GATSBY_FAUNA_URL}`,
+            headers: {
+               Authorization: `Bearer ${process.env.GATSBY_FAUNA_API_KEY}`,
+            },
+         },
+      },
    ],
 };
