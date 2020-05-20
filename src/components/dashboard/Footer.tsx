@@ -10,7 +10,7 @@ const Footer: FC = () => {
    const isLoggedIn = identity && identity.isLoggedIn;
 
    return identity && isLoggedIn ? (
-      <div>
+      <div className="fixed bottom-0 left-0 right-0 w-screen">
          <nav className="flex items-center justify-around h-16 text-white border-t-4 bg-black-mimi font-secondary border-orange-mimi">
             <Link
                className="pb-1"
@@ -36,7 +36,7 @@ const Footer: FC = () => {
          </nav>
       </div>
    ) : (
-      <div className="flex items-center justify-center h-16 text-white border-t-4 bg-black-mimi font-secondary border-orange-mimi">
+      <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-16 text-white border-t-4 bg-black-mimi font-secondary border-orange-mimi">
          <p>Made with 💜 by MiMi</p>
       </div>
    );
