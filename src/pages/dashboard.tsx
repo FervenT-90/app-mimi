@@ -29,9 +29,9 @@ const Dashboard = ({ location }) => {
    }, []);
    return (
       <MainLayout>
-         <div className="flex flex-col min-h-screen">
+         <div className="flex flex-col max-h-screen">
             <Header showLogin={showLogin} />
-            <div className="flex items-center justify-center flex-1">
+            <div className="flex flex-1 w-screen pt-20">
                <Router>
                   <PrivateRoute path="dashboard/join" component={Join} />
                   <PrivateRoute path="dashboard/profile" component={Profile} />
