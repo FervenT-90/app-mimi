@@ -11,3 +11,16 @@ body {
 .text-mimi-shadow {
    text-shadow: 0.5px 0.5px 5px #222;
 }
+
+.animation {
+   animation: text-animate-mimi 1s;
+}
+
+@keyframes text-animate-mimi {
+   0% {
+      letter-spacing: 20px;
+   }
+   100% {
+      letter-spacing: normal;
+   }
+}
