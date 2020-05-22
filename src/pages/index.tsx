@@ -18,7 +18,7 @@ const Main: FC = () => {
                className="px-6 py-1 mt-20 font-semibold tracking-wider text-white uppercase rounded shadow bg-green-mimi focus:outline-none focus:underline"
                to="/dashboard"
             >
-               Let&apos;s start!
+               comienza ya
             </Link>
          </div>
          <Footer />

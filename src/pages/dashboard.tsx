@@ -4,7 +4,7 @@ import { Router } from '@reach/router';
 import MainLayout from '../layouts/main';
 import Header from '../components/dashboard/Header';
 import PrivateRoute from '../components/PrivateRoute';
-
+import Load from '../components/Load';
 import {
    Join,
    Workouts,
@@ -35,10 +35,7 @@ const Dashboard = ({ location }) => {
                <Router>
                   <PrivateRoute path="dashboard/join" component={Join} />
                   <PrivateRoute path="dashboard/profile" component={Profile} />
-                  <PrivateRoute
-                     path="dashboard/workouts"
-                     component={Workouts}
-                  />
+                  <PrivateRoute path="dashboard/workouts" component={Load} />
                   <PrivateRoute
                      path="dashboard/settings"
                      component={Settings}
