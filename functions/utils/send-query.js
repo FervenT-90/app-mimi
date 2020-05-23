@@ -3,10 +3,10 @@ const axios = require('axios');
 
 module.exports = async (query, variables) => {
    const result = await axios({
-      url: process.env.FAUNADB_URL,
+      url: process.env.GATSBY_FAUNADB_URL,
       method: 'POST',
       headers: {
-         Authorization: `Bearer ${process.env.FAUNADB_API_KEY}`,
+         Authorization: `Bearer ${process.env.GATSBY_FAUNADB_API_KEY}`,
       },
       data: {
          query,

@@ -20,6 +20,7 @@ export const GET_ADMIN_DATA: DocumentNode = gql`
                      _id
                      startTime
                      finishTime
+                     bookedVacancies
                      vacancies
                      finished
                   }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { navigate } from 'gatsby';
 import { Router } from '@reach/router';
+import IdentityModal from 'react-netlify-identity-widget';
+import 'react-netlify-identity-widget/styles.css';
 import MainLayout from '../layouts/main';
 import Header from '../components/dashboard/Header';
+import Footer from '../components/dashboard/Footer';
 import PrivateRoute from '../components/PrivateRoute';
-
 import {
    Join,
    Workouts,
@@ -12,11 +14,6 @@ import {
    Settings,
    Login,
 } from '../components/dashboard/routes/index';
-
-import IdentityModal from 'react-netlify-identity-widget';
-import 'react-netlify-identity-widget/styles.css';
-
-import Footer from '../components/dashboard/Footer';
 
 const Dashboard = ({ location }) => {
    const [isDialogVisible, setIsDialogVisible] = useState(false);
@@ -27,11 +24,12 @@ const Dashboard = ({ location }) => {
          navigate('/dashboard/login', { replace: true });
       }
    }, []);
+
    return (
       <MainLayout>
-         <div className="flex flex-col min-h-screen">
+         <div className="flex flex-col max-h-screen">
             <Header showLogin={showLogin} />
-            <div className="flex items-center justify-center flex-1">
+            <div className="flex flex-1 w-screen pt-20">
                <Router>
                   <PrivateRoute path="dashboard/join" component={Join} />
                   <PrivateRoute path="dashboard/profile" component={Profile} />

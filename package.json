@@ -16,6 +16,7 @@
     "@reach/tabs": "^0.10.2",
     "@reach/visually-hidden": "^0.10.2",
     "apollo-boost": "^0.4.9",
+    "apollo-link-http": "^1.5.17",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gatsby": "2.21.22",
@@ -32,6 +33,7 @@
     "typeface-oxanium": "^1.1.4"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.35",
     "autoprefixer": "9.7.6",
     "babel-eslint": "10.1.0",
     "cssnano": "4.1.10",
