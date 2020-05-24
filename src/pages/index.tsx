@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import MainLayout from '../layouts/main';
-import startScreen from '../assets/svgs/startScreen.min.svg';
+import startScreen from '../assets/svgs/gettingStarted.min.svg';
 import Header from '../components/dashboard/Header';
 import Footer from '../components/dashboard/Footer';
 const Main: FC = () => {

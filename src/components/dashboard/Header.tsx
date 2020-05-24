@@ -7,7 +7,7 @@ import logout from '../../assets/svgs/logout.min.svg';
 import profileButton from '../../assets/images/avatar.png';
 
 interface Props {
-   showLogin: () => void;
+   showLogin?: () => void;
 }
 
 const Header: FC<Props> = ({ showLogin }) => {
