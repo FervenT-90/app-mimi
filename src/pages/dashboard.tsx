@@ -33,10 +33,7 @@ const Dashboard = ({ location }) => {
                <Router>
                   <PrivateRoute path="dashboard/join" component={Join} />
                   <PrivateRoute path="dashboard/profile" component={Profile} />
-                  <PrivateRoute
-                     path="dashboard/workouts"
-                     component={Workouts}
-                  />
+                  <PrivateRoute path="dashboard/workouts" component={Workouts} />
                   <PrivateRoute
                      path="dashboard/settings"
                      component={Settings}
