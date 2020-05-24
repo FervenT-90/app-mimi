@@ -1,9 +1,11 @@
-import React, { FC, MouseEvent, useState, useEffect } from 'react';
+import React, { FC, MouseEvent, useState, useEffect, useRef } from 'react';
 import { apolloService } from '../../../services/apolloService';
 import { Day } from '../../../apollo/utils/faunaTypes';
 import { useMutation } from '@apollo/react-hooks';
 import { mutations } from '../../../apollo/utils/mutations/';
 import { joinSVGs } from '../../../assets/svgs';
+import Carousel from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 //INSTALAR @types/isomorphic-fetch
 const initialDay: Day = {
@@ -13,11 +15,12 @@ const initialDay: Day = {
    number: null,
    adminWorkouts: null,
 };
+let carouselRef = React.createRef();
 
 export const Join: FC = () => {
    const [currentDay, setcurrentDay] = useState(0);
    const [selectedDay, setselectedDay] = useState<Day>(initialDay);
-
+   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
    const {
       joinMonth,
       loading: monthLoading,
@@ -70,6 +73,9 @@ export const Join: FC = () => {
    };
 
    useEffect(() => {
+      if (carouselRef && carouselRef.slickGoTo) {
+         carouselRef.slickGoTo(currentSlideIndex);
+      }
       if (joinMonth && joinMonth.days && user && user.workouts.data) {
          setselectedDay(joinMonth.days[currentDay]);
          isDayBooked = hasCurrentDayWorkoutBooked(selectedDay._id);
@@ -106,6 +112,8 @@ export const Join: FC = () => {
       event.preventDefault();
       const selectedDay = +event.currentTarget.attributes['value'].nodeValue;
       setcurrentDay(selectedDay);
+
+      setCurrentSlideIndex(+event.currentTarget.attributes['value'].nodeValue);
    };
 
    const getUserWorkoutIdBy = (adminWorkoutID: string): string => {
@@ -126,23 +134,40 @@ export const Join: FC = () => {
    let currentDayWorkoutIdBooked: string;
    let isDayBooked = hasCurrentDayWorkoutBooked(selectedDay._id);
 
+   const carouselSettings = {
+      dots: false,
+      infinite: false,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      arrows: false,
+   };
+
    return (
       <div className="w-screen mb-24 md:flex md:flex-col md:justify-center md:items-center">
-         {/* Crear carousel */}
-         <div className="fixed top-0 flex flex-row items-center w-screen h-20 mt-20 bg-opacity-50 bg-black-mimi">
+         <Carousel
+            className="fixed top-0 flex flex-row items-center w-screen h-20 mt-20 bg-opacity-50 slick-slider bg-black-mimi"
+            ref={(carousel) => (carouselRef = carousel)}
+            {...carouselSettings}
+         >
             {days.map((day, index) => (
-               <button
-                  className="flex flex-col items-center"
+               <div
+                  className="flex items-center justify-center py-3"
                   key={day._id}
-                  value={index}
-                  onClick={handleDayClick}
                >
-                  <div>{day.name.substr(0, 3)}</div>
-                  <div>{day.number}</div>
-               </button>
+                  <button
+                     id={day._id}
+                     className="flex flex-col items-center px-6 text-white text-mimi-shadow font-primary focus:outline-none"
+                     key={day._id}
+                     value={index}
+                     onClick={handleDayClick}
+                  >
+                     <p>{day.name.substr(0, 3)}</p>
+                     <p>{day.number}</p>
+                  </button>
+               </div>
             ))}
-         </div>
-         {/*  */}
+         </Carousel>
+
          <p className="pt-32 text-5xl text-center text-white font-primary text-mimi-shadow">
             {monthName}
          </p>

@@ -50,3 +50,11 @@ body {
       opacity: 1;
    }
 }
+
+.slick-slider {
+   position: fixed !important;
+}
+
+.slick-slide.slick-active.slick-current p {
+   @apply text-green-mimi;
+}
