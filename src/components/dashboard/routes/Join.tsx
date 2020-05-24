@@ -4,6 +4,7 @@ import { Day } from '../../../apollo/utils/faunaTypes';
 import { useMutation } from '@apollo/react-hooks';
 import { mutations } from '../../../apollo/utils/mutations/';
 import { joinSVGs } from '../../../assets/svgs';
+import Load from '../../Load';
 
 //INSTALAR @types/isomorphic-fetch
 const initialDay: Day = {
@@ -96,7 +97,7 @@ export const Join: FC = () => {
       removeUserWorkoutFromUserLoading ||
       deleteUserWorkoutByIDLoading
    ) {
-      return <p>Loading...</p>;
+      return <Load />;
    }
 
    const monthName = joinMonth.monthName;
