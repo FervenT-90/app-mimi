@@ -6,8 +6,8 @@ import { mutations } from '../../../apollo/utils/mutations/';
 import { joinSVGs } from '../../../assets/svgs';
 import Carousel from 'react-slick';
 import 'slick-carousel/slick/slick.css';
+import Load from '../../Load';
 
-//INSTALAR @types/isomorphic-fetch
 const initialDay: Day = {
    _id: null,
    month: null,
@@ -102,7 +102,7 @@ export const Join: FC = () => {
       removeUserWorkoutFromUserLoading ||
       deleteUserWorkoutByIDLoading
    ) {
-      return <p>Loading...</p>;
+      return <Load />;
    }
 
    const monthName = joinMonth.monthName;
