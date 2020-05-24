@@ -7,7 +7,7 @@ import { joinSVGs } from '../../../assets/svgs';
 import Carousel from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import Load from '../../Load';
-
+import Error from '../../Error';
 const initialDay: Day = {
    _id: null,
    month: null,
@@ -91,7 +91,7 @@ export const Join: FC = () => {
       deleteUserWorkoutByIDError
    ) {
       // return <p>Upss...{JSON.stringify(Error)}</p>; Preguntar a Raul cuando vuelva de vacas xD
-      return <p>Upss...something went Wrong. Please try again.</p>;
+      return <Error />;
    }
 
    if (
