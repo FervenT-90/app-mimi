@@ -15,6 +15,14 @@ body {
 .animation {
    animation: text-animate-mimi 1s;
 }
+.spin-animation {
+   animation: spin 2s infinite;
+}
+.blink {
+   transition: all 0.5s;
+   transition-delay: 1s;
+   animation: blink 1s infinite;
+}
 
 @keyframes text-animate-mimi {
    0% {
@@ -22,5 +30,23 @@ body {
    }
    100% {
       letter-spacing: normal;
+   }
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes blink {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
    }
 }
