@@ -1,0 +1,54 @@
+enum WorkoutStates {
+   BOOKED
+   COMPLETED
+}
+
+type User {
+   netlifyID: ID!
+   stripeID: ID!
+   active: Boolean
+   workouts: [UserWorkout]! @relation
+}
+
+type UserWorkout {
+   state: WorkoutStates!
+   rating: Int
+   date: Int
+   user: User!
+   adminWorkoutID: ID!
+   dayID: ID!
+}
+
+type AdminWorkout {
+   startTime: String!
+   finishTime: String!
+   bookedVacancies: Int!
+   vacancies: Int!
+   finished: Boolean!
+   day: Day!
+   date: Int
+}
+
+type Year {
+   number: Int!
+   months: [Month!] @relation
+}
+
+type Month {
+   name: String!
+   number: Int!
+   year: Year!
+   days: [Day!] @relation
+}
+
+type Day {
+   name: String!
+   number: Int!
+   month: Month!
+   adminWorkouts: [AdminWorkout]! @relation
+}
+
+type Query {
+   userByNetlifyID(netlifyID: ID!): User!
+   monthByNumber(number: Int!): Month!
+}

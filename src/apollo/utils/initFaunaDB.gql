@@ -1,0 +1,2250 @@
+mutation {
+   createYear(
+      data: {
+         number: 2020
+         months: {
+            create: [
+               {
+                  name: "Junio"
+                  number: 6
+                  days: {
+                     create: [
+                        {
+                           name: "Lunes"
+                           number: 1
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 2
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 5
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 3
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 4
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 0
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 0
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 5
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 0
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 8
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 9
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 0
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 5
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 10
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 11
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 12
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 15
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 16
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 17
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 18
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 19
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 22
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 23
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 24
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 25
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 26
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 29
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 30
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                     ]
+                  }
+               }
+               {
+                  name: "Julio"
+                  number: 7
+                  days: {
+                     create: [
+                        {
+                           name: "Lunes"
+                           number: 1
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 2
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 3
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 4
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 5
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 8
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 9
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 10
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 11
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 12
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 15
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 16
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 17
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 18
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 19
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 22
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 23
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Miércoles"
+                           number: 24
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Jueves"
+                           number: 25
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Viernes"
+                           number: 26
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Lunes"
+                           number: 29
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                        {
+                           name: "Martes"
+                           number: 30
+                           adminWorkouts: {
+                              create: [
+                                 {
+                                    startTime: "09:00"
+                                    finishTime: "10:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "10:30"
+                                    finishTime: "11:30"
+                                    bookedVacancies: 4
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "12:00"
+                                    finishTime: "13:00"
+                                    bookedVacancies: 2
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "16:30"
+                                    finishTime: "17:30"
+                                    bookedVacancies: 1
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "19:00"
+                                    finishTime: "20:00"
+                                    bookedVacancies: 6
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                                 {
+                                    startTime: "20:00"
+                                    finishTime: "21:00"
+                                    bookedVacancies: 3
+                                    vacancies: 6
+                                    finished: false
+                                 }
+                              ]
+                           }
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      }
+   ) {
+      number
+      months {
+         data {
+            number
+            name
+            days {
+               data {
+                  name
+                  number
+                  adminWorkouts {
+                     data {
+                        startTime
+                        finishTime
+                        bookedVacancies
+                        vacancies
+                        finished
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

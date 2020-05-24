@@ -15,19 +15,30 @@ export enum WorkoutStates {
 }
 
 export type User = {
+   _id: Scalars['ID'];
    __typename?: 'User';
    netlifyID: Scalars['ID'];
    stripeID: Scalars['ID'];
    active?: Maybe<Scalars['Boolean']>;
-   workouts: Array<Maybe<UserWorkout>>;
+   workouts: Maybe<UserWorkoutPage>;
+};
+
+export type UserWorkoutPage = {
+   __typename?: 'UserWorkoutPage';
+   data: Array<Maybe<UserWorkout>>;
+   after: Scalars['String'];
+   before: Scalars['String'];
 };
 
 export type UserWorkout = {
+   _id: Scalars['ID'];
    __typename?: 'UserWorkout';
    state: WorkoutStates;
    rating?: Maybe<Scalars['Int']>;
    date?: Maybe<Scalars['Int']>;
    user: User;
+   adminWorkoutID: Scalars['ID'];
+   dayID: Scalars['ID'];
 };
 
 export type Year = {
@@ -52,6 +63,7 @@ export type DayPage = {
 };
 
 export type Day = {
+   _id: Scalars['ID'];
    __typename?: 'Day';
    name: Scalars['String'];
    number: Scalars['Int'];
@@ -67,13 +79,23 @@ export type AdminWorkoutPage = {
 };
 
 export type AdminWorkout = {
+   _id: Scalars['ID'];
    __typename?: 'AdminWorkout';
    startTime: Scalars['String'];
    finishTime: Scalars['String'];
+   bookedVacancies: Scalars['Int'];
    vacancies: Scalars['Int'];
    finished: Scalars['Boolean'];
    day: Day;
    date?: Maybe<Scalars['Int']>;
+};
+
+export type AdminWorkoutInput = {
+   startTime: Scalars['String'];
+   finishTime: Scalars['String'];
+   bookedVacancies: Scalars['Int'];
+   vacancies: Scalars['Int'];
+   finished: Scalars['Boolean'];
 };
 
 export type Query = {
@@ -81,6 +103,15 @@ export type Query = {
    monthByNumber: Month;
 };
 
-export type QueryMonthByNumberArgs = {
+export type MonthByNumberArgs = {
    number: Scalars['Int'];
+};
+
+export type GetUserByNetlifyIDArgs = {
+   netlifyID: Scalars['ID'];
+};
+
+export type UpdateBookedVacanciesByOneArgs = {
+   id: Scalars['ID'];
+   data: AdminWorkoutInput;
 };
