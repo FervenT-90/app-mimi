@@ -58,3 +58,11 @@ body {
 .slick-slide.slick-active.slick-current p {
    @apply text-green-mimi;
 }
+
+.ReactModal__Overlay {
+   background-color: rgba(51, 51, 51, 0.5) !important;
+}
+
+.ReactModal__Content {
+   opacity: 1 !important;
+}
