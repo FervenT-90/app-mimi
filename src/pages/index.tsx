@@ -8,7 +8,7 @@ const Main: FC = () => {
    return (
       <MainLayout>
          <Header />
-         <div className="flex flex-col items-center justify-center h-screen -mt-24">
+         <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="mb-10 text-4xl text-white animation font-primary text-mimi-shadow">
                Bienvenido
             </h1>
