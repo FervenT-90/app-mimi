@@ -11,9 +11,11 @@ import profileAvatar from './profileAvatar.min.svg';
 import profileButton from './profileButton.min.svg';
 import settings from './settings.min.svg';
 import vacancies from './vacancies.min.svg';
+import vacanciesDone from './vacanciesDone.min.svg';
 import vacanciesDisabled from './vacanciesDisabled.min.svg';
 import workoutFull from './workoutFull.min.svg';
 import workoutTime from './workoutTime.min.svg';
+import workoutTimeDone from './workoutTimeDone.min.svg';
 import workoutTimeDisabled from './workoutTimeDisabled.min.svg';
 import doneRating from './doneRating.min.svg';
 import rating from './rating.min.svg';
@@ -22,9 +24,12 @@ import doneWorkoutSmall from './doneWorkoutSmall.min.svg';
 
 export const joinSVGs = {
    workoutTime,
+   workoutTimeDone,
    workoutTimeDisabled,
    workoutFull,
+   doneWorkout,
    vacancies,
+   vacanciesDone,
    vacanciesDisabled,
    cancelWorkout,
    joinWorkout,

@@ -144,6 +144,10 @@ export const Join: FC = () => {
       arrows: false,
    };
 
+   // TODO: use current day || Finished field of adminWorkout
+   const today = 5;
+   let isDayPast = selectedDay.number < today;
+
    return (
       <div className="w-screen mb-24 md:flex md:flex-col md:justify-center md:items-center">
          <Carousel
@@ -190,93 +194,134 @@ export const Join: FC = () => {
                         adminWorkout.bookedVacancies < adminWorkout.vacancies &&
                         currentDayWorkoutIdBooked === adminWorkout._id
                      ) {
-                        return (
-                           <div
-                              key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
-                           >
-                              <div className="flex items-center ">
-                                 <img
-                                    className="w-5 h-5 mr-2"
-                                    src={joinSVGs.workoutTime}
-                                    alt="clock"
-                                 />
-                                 <p>
-                                    {adminWorkout.startTime} -{' '}
-                                    {adminWorkout.finishTime}
-                                 </p>
-                              </div>
-                              <div className="flex items-baseline text-center ">
-                                 <p>
-                                    {adminWorkout.bookedVacancies}/
-                                    {adminWorkout.vacancies}
-                                 </p>
-                                 <img
-                                    className="ml-2"
-                                    src={joinSVGs.vacancies}
-                                    alt="people"
-                                 />
-                              </div>
-
-                              <div className="text-2xl text-right">
-                                 <button
-                                    className="flex items-center"
-                                    onClick={() => {
-                                       const userWorkoutIdToDisconnect = getUserWorkoutIdBy(
-                                          adminWorkout._id
-                                       );
-
-                                       // Desconecta el userWorkout del user con la mutacion removeUserWorkoutFromUser
-                                       removeUserWorkoutFromUser({
-                                          variables: {
-                                             id: user._id,
-                                             netlifyID: user.netlifyID,
-                                             stripeID: user.netlifyID,
-                                             userWorkoutIdToDisconnect,
-                                          },
-                                       });
-
-                                       // Elimina el UserWorkout desconectado
-                                       deleteUserWorkoutByID({
-                                          variables: {
-                                             id: userWorkoutIdToDisconnect,
-                                          },
-                                       });
-
-                                       updateAdminWorkout({
-                                          variables: {
-                                             id: adminWorkout._id,
-                                             data: {
-                                                startTime:
-                                                   adminWorkout.startTime,
-                                                finishTime:
-                                                   adminWorkout.finishTime,
-                                                bookedVacancies:
-                                                   adminWorkout.bookedVacancies -
-                                                   1,
-                                                vacancies:
-                                                   adminWorkout.vacancies,
-                                                finished: adminWorkout.finished,
-                                             },
-                                          },
-                                       });
-                                    }}
-                                 >
+                        if (isDayPast) {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-green-mimi bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center">
                                     <img
-                                       src={joinSVGs.cancelWorkout}
-                                       alt="cancel workout"
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTimeDone}
+                                       alt="clock"
                                     />
-                                 </button>
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacanciesDone}
+                                       alt="people"
+                                    />
+                                 </div>
+                                 <div className="text-2xl text-right">
+                                    <button className="flex items-center">
+                                       <img
+                                          src={joinSVGs.doneWorkout}
+                                          alt="Join Workout disabled"
+                                       />
+                                    </button>
+                                 </div>
                               </div>
-                           </div>
-                        );
+                           );
+                        } else {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center ">
+                                    <img
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTime}
+                                       alt="clock"
+                                    />
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacancies}
+                                       alt="people"
+                                    />
+                                 </div>
+
+                                 <div className="text-2xl text-right">
+                                    <button
+                                       className="flex items-center"
+                                       onClick={() => {
+                                          const userWorkoutIdToDisconnect = getUserWorkoutIdBy(
+                                             adminWorkout._id
+                                          );
+
+                                          // Desconecta el userWorkout del user con la mutacion removeUserWorkoutFromUser
+                                          removeUserWorkoutFromUser({
+                                             variables: {
+                                                id: user._id,
+                                                netlifyID: user.netlifyID,
+                                                stripeID: user.netlifyID,
+                                                userWorkoutIdToDisconnect,
+                                             },
+                                          });
+
+                                          // Elimina el UserWorkout desconectado
+                                          deleteUserWorkoutByID({
+                                             variables: {
+                                                id: userWorkoutIdToDisconnect,
+                                             },
+                                          });
+
+                                          updateAdminWorkout({
+                                             variables: {
+                                                id: adminWorkout._id,
+                                                data: {
+                                                   startTime:
+                                                      adminWorkout.startTime,
+                                                   finishTime:
+                                                      adminWorkout.finishTime,
+                                                   bookedVacancies:
+                                                      adminWorkout.bookedVacancies -
+                                                      1,
+                                                   vacancies:
+                                                      adminWorkout.vacancies,
+                                                   finished:
+                                                      adminWorkout.finished,
+                                                },
+                                             },
+                                          });
+                                       }}
+                                    >
+                                       <img
+                                          src={joinSVGs.cancelWorkout}
+                                          alt="cancel workout"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           );
+                        }
 
                         // Si el workout tiene disponibilidad y NO es el que el usuario tiene reservado
                      } else if (
                         adminWorkout.bookedVacancies < adminWorkout.vacancies &&
                         currentDayWorkoutIdBooked !== adminWorkout._id
                      ) {
-                        return (
+                        if (isDayPast) {
                            <div
                               key={adminWorkout._id}
                               className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
@@ -284,7 +329,7 @@ export const Join: FC = () => {
                               <div className="flex items-center">
                                  <img
                                     className="w-5 h-5 mr-2"
-                                    src={joinSVGs.workoutTime}
+                                    src={joinSVGs.workoutTimeDisabled}
                                     alt="clock"
                                  />
                                  <p>
@@ -299,7 +344,7 @@ export const Join: FC = () => {
                                  </p>
                                  <img
                                     className="ml-2"
-                                    src={joinSVGs.vacancies}
+                                    src={joinSVGs.vacanciesDisabled}
                                     alt="people"
                                  />
                               </div>
@@ -311,93 +356,174 @@ export const Join: FC = () => {
                                     />
                                  </button>
                               </div>
-                           </div>
-                        );
-
+                           </div>;
+                        } else {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center">
+                                    <img
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTime}
+                                       alt="clock"
+                                    />
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacancies}
+                                       alt="people"
+                                    />
+                                 </div>
+                                 <div className="text-2xl text-right">
+                                    <button className="flex items-center">
+                                       <img
+                                          src={joinSVGs.joinWorkoutDisabled}
+                                          alt="Join Workout disabled"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           );
+                        }
                         // Si el workout NO tiene disponibilidad y SI es el que el usuario tiene reservado
                      } else if (
                         adminWorkout.bookedVacancies ===
                            adminWorkout.vacancies &&
                         currentDayWorkoutIdBooked === adminWorkout._id
                      ) {
-                        return (
-                           <div
-                              key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
-                           >
-                              <div className="flex items-center ">
-                                 <img
-                                    className="w-5 h-5 mr-2"
-                                    src={joinSVGs.workoutTime}
-                                    alt="clock"
-                                 />
-                                 <p>
-                                    {adminWorkout.startTime} -{' '}
-                                    {adminWorkout.finishTime}
-                                 </p>
-                              </div>
-                              <div className="flex items-baseline text-center ">
-                                 <p>
-                                    {adminWorkout.bookedVacancies}/
-                                    {adminWorkout.vacancies}
-                                 </p>
-                                 <img
-                                    className="ml-2"
-                                    src={joinSVGs.vacancies}
-                                    alt="people"
-                                 />
-                              </div>
-                              <div className="text-2xl text-right">
-                                 <button
-                                    className="flex items-center"
-                                    onClick={() => {
-                                       const userWorkoutIdToDisconnect = getUserWorkoutIdBy(
-                                          adminWorkout._id
-                                       );
-
-                                       // Desconecta el userWorkout del user con la mutacion removeUserWorkoutFromUser
-                                       removeUserWorkoutFromUser({
-                                          variables: {
-                                             id: user._id,
-                                             netlifyID: user.netlifyID,
-                                             stripeID: user.netlifyID,
-                                             userWorkoutIdToDisconnect,
-                                          },
-                                       });
-
-                                       // Elimina el UserWorkout desconectado
-                                       deleteUserWorkoutByID({
-                                          variables: {
-                                             id: userWorkoutIdToDisconnect,
-                                          },
-                                       });
-                                       updateAdminWorkout({
-                                          variables: {
-                                             id: adminWorkout._id,
-                                             data: {
-                                                startTime:
-                                                   adminWorkout.startTime,
-                                                finishTime:
-                                                   adminWorkout.finishTime,
-                                                bookedVacancies:
-                                                   adminWorkout.bookedVacancies -
-                                                   1,
-                                                vacancies:
-                                                   adminWorkout.vacancies,
-                                                finished: adminWorkout.finished,
-                                             },
-                                          },
-                                       });
-                                    }}
-                                 >
+                        if (isDayPast) {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-green-mimi bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center">
                                     <img
-                                       src={joinSVGs.cancelWorkout}
-                                       alt="cancel workout"
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTimeDone}
+                                       alt="clock"
                                     />
-                                 </button>
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacanciesDone}
+                                       alt="people"
+                                    />
+                                 </div>
+                                 <div className="text-2xl text-right">
+                                    <button className="flex items-center">
+                                       <img
+                                          src={joinSVGs.doneWorkout}
+                                          alt="Join Workout disabled"
+                                       />
+                                    </button>
+                                 </div>
                               </div>
-                           </div>
-                        );
+                           );
+                        } else {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center ">
+                                    <img
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTime}
+                                       alt="clock"
+                                    />
+                                    <p>
+                                       {adminWorkout._id}
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacancies}
+                                       alt="people"
+                                    />
+                                 </div>
+
+                                 <div className="text-2xl text-right">
+                                    <button
+                                       className="flex items-center"
+                                       onClick={() => {
+                                          const userWorkoutIdToDisconnect = getUserWorkoutIdBy(
+                                             adminWorkout._id
+                                          );
+
+                                          // Desconecta el userWorkout del user con la mutacion removeUserWorkoutFromUser
+                                          removeUserWorkoutFromUser({
+                                             variables: {
+                                                id: user._id,
+                                                netlifyID: user.netlifyID,
+                                                stripeID: user.netlifyID,
+                                                userWorkoutIdToDisconnect,
+                                             },
+                                          });
+
+                                          // Elimina el UserWorkout desconectado
+                                          deleteUserWorkoutByID({
+                                             variables: {
+                                                id: userWorkoutIdToDisconnect,
+                                             },
+                                          });
+
+                                          updateAdminWorkout({
+                                             variables: {
+                                                id: adminWorkout._id,
+                                                data: {
+                                                   startTime:
+                                                      adminWorkout.startTime,
+                                                   finishTime:
+                                                      adminWorkout.finishTime,
+                                                   bookedVacancies:
+                                                      adminWorkout.bookedVacancies -
+                                                      1,
+                                                   vacancies:
+                                                      adminWorkout.vacancies,
+                                                   finished:
+                                                      adminWorkout.finished,
+                                                },
+                                             },
+                                          });
+                                       }}
+                                    >
+                                       <img
+                                          src={joinSVGs.cancelWorkout}
+                                          alt="cancel workout"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           );
+                        }
                      }
 
                      // Si el workout NO tiene disponibilidad y NO es el que el usuario tiene reservado
@@ -449,73 +575,115 @@ export const Join: FC = () => {
                         adminWorkout.bookedVacancies < adminWorkout.vacancies
                      ) {
                         // El workout SI tiene disponibilidad
-                        return (
-                           <div
-                              key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
-                           >
-                              <div className="flex items-center ">
-                                 <img
-                                    className="w-5 h-5 mr-2"
-                                    src={joinSVGs.workoutTime}
-                                    alt="clock"
-                                 />
-                                 <p>
-                                    {adminWorkout.startTime} -{' '}
-                                    {adminWorkout.finishTime}
-                                 </p>
-                              </div>
-                              <div className="flex items-baseline text-center ">
-                                 <p>
-                                    {adminWorkout.bookedVacancies}/
-                                    {adminWorkout.vacancies}
-                                 </p>
-                                 <img
-                                    className="ml-2"
-                                    src={joinSVGs.vacancies}
-                                    alt="people"
-                                 />
-                              </div>
-                              <div className="text-2xl text-right">
-                                 <button
-                                    className="flex items-center"
-                                    onClick={() => {
-                                       addUserWorkoutToUser({
-                                          variables: {
-                                             id: user._id,
-                                             netlifyID: user.netlifyID,
-                                             stripeID: user.stripeID,
-                                             adminWorkoutID: adminWorkout._id,
-                                             dayID: selectedDay._id,
-                                          },
-                                       });
-                                       updateAdminWorkout({
-                                          variables: {
-                                             id: adminWorkout._id,
-                                             data: {
-                                                startTime:
-                                                   adminWorkout.startTime,
-                                                finishTime:
-                                                   adminWorkout.finishTime,
-                                                bookedVacancies:
-                                                   adminWorkout.bookedVacancies +
-                                                   1,
-                                                vacancies:
-                                                   adminWorkout.vacancies,
-                                                finished: adminWorkout.finished,
-                                             },
-                                          },
-                                       });
-                                    }}
-                                 >
+                        if (isDayPast) {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center">
                                     <img
-                                       src={joinSVGs.joinWorkout}
-                                       alt="join workout"
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTimeDisabled}
+                                       alt="clock"
                                     />
-                                 </button>
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacanciesDisabled}
+                                       alt="people"
+                                    />
+                                 </div>
+                                 <div className="text-2xl text-right">
+                                    <button className="flex items-center">
+                                       <img
+                                          src={joinSVGs.joinWorkoutDisabled}
+                                          alt="Join Workout disabled"
+                                       />
+                                    </button>
+                                 </div>
                               </div>
-                           </div>
-                        );
+                           );
+                        } else {
+                           return (
+                              <div
+                                 key={adminWorkout._id}
+                                 className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
+                              >
+                                 <div className="flex items-center ">
+                                    <img
+                                       className="w-5 h-5 mr-2"
+                                       src={joinSVGs.workoutTime}
+                                       alt="clock"
+                                    />
+                                    <p>
+                                       {adminWorkout.startTime} -{' '}
+                                       {adminWorkout.finishTime}
+                                    </p>
+                                 </div>
+                                 <div className="flex items-baseline text-center ">
+                                    <p>
+                                       {adminWorkout.bookedVacancies}/
+                                       {adminWorkout.vacancies}
+                                    </p>
+                                    <img
+                                       className="ml-2"
+                                       src={joinSVGs.vacancies}
+                                       alt="people"
+                                    />
+                                 </div>
+                                 <div className="text-2xl text-right">
+                                    <button
+                                       className="flex items-center"
+                                       onClick={() => {
+                                          addUserWorkoutToUser({
+                                             variables: {
+                                                id: user._id,
+                                                netlifyID: user.netlifyID,
+                                                stripeID: user.stripeID,
+                                                adminWorkoutID:
+                                                   adminWorkout._id,
+                                                dayID: selectedDay._id,
+                                             },
+                                          });
+                                          updateAdminWorkout({
+                                             variables: {
+                                                id: adminWorkout._id,
+                                                data: {
+                                                   startTime:
+                                                      adminWorkout.startTime,
+                                                   finishTime:
+                                                      adminWorkout.finishTime,
+                                                   bookedVacancies:
+                                                      adminWorkout.bookedVacancies +
+                                                      1,
+                                                   vacancies:
+                                                      adminWorkout.vacancies,
+                                                   finished:
+                                                      adminWorkout.finished,
+                                                },
+                                             },
+                                          });
+                                       }}
+                                    >
+                                       <img
+                                          src={joinSVGs.joinWorkout}
+                                          alt="join workout"
+                                       />
+                                    </button>
+                                 </div>
+                              </div>
+                           );
+                        }
                      }
 
                      // El workout NO tiene disponibilidad
