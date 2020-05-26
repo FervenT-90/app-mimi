@@ -10,6 +10,7 @@ import {
 import { mutations } from '../../../apollo/utils/mutations/';
 import { useMutation } from '@apollo/react-hooks';
 import ReactModal from 'react-modal';
+import { workoutsSVGs } from '../../../assets/svgs';
 
 const initialUserWorkout: UserWorkout = {
    _id: null,
@@ -111,14 +112,29 @@ export const Workouts: FC = () => {
                   key={userAdminWorkouts[i]._id}
                   className="flex items-center justify-between w-screen p-3 mb-1 text-white bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
                >
-                  <span className="w-2/6">
-                     {completedWorkoutsDays[i].name}{' '}
-                     {completedWorkoutsDays[i].number}
-                  </span>
-                  <span>{userAdminWorkouts[i].startTime}</span>
-                  <span className="w-1/6 text-center">
-                     {completedUserWorkouts[i].rating}
-                  </span>
+                  <div className="flex items-center w-2/6">
+                     <img
+                        className="mr-2"
+                        src={workoutsSVGs.doneWorkoutSmall}
+                        alt="Done workout"
+                     />
+                     <p>
+                        {completedWorkoutsDays[i].name.substr(0, 3)}{' '}
+                        {completedWorkoutsDays[i].number}
+                     </p>
+                  </div>
+                  <div className="flex items-center">
+                     <img
+                        className="mr-2"
+                        src={workoutsSVGs.workoutTime}
+                        alt="Clock"
+                     />
+                     <p>{userAdminWorkouts[i].startTime}</p>
+                  </div>
+                  <div className="flex items-baseline justify-end w-1/6">
+                     <p className="mr-2">{completedUserWorkouts[i].rating}</p>
+                     <img src={workoutsSVGs.doneRating} alt="Done rating" />
+                  </div>
                </div>
             );
          } else {
@@ -127,18 +143,30 @@ export const Workouts: FC = () => {
                   key={userAdminWorkouts[i]._id}
                   className="flex items-center justify-between w-screen p-3 mb-1 text-white bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
                >
-                  <span className="w-2/6">
-                     {completedWorkoutsDays[i].name}{' '}
+                  <div className="flex items-center w-2/6">
+                     <img
+                        className="mr-2"
+                        src={workoutsSVGs.doneWorkoutSmall}
+                        alt="Done workout"
+                     />
+                     {completedWorkoutsDays[i].name.substr(0, 3)}{' '}
                      {completedWorkoutsDays[i].number}
-                  </span>
-                  <span>{userAdminWorkouts[i].startTime}</span>
+                  </div>
+                  <div className="flex items-center">
+                     <img
+                        className="mr-2"
+                        src={workoutsSVGs.workoutTime}
+                        alt="Clock"
+                     />
+                     {userAdminWorkouts[i].startTime}
+                  </div>
                   <button
                      onClick={() => {
                         handleClick(i);
                      }}
-                     className="w-1/6 text-center"
+                     className="flex items-baseline justify-center w-1/6"
                   >
-                     ⭐
+                     <img src={workoutsSVGs.rating} alt="Rating icon" />
                   </button>
                </div>
             );
@@ -167,14 +195,15 @@ export const Workouts: FC = () => {
                      e.preventDefault();
                      handleRateUserWorkout(+e.currentTarget[0].value);
                   }}
-                  action=""
                >
-                  <h1 className="mb-2 text-xl text-white font-primary text-mimi-shadow">
-                     Valora el esfuero percibido
-                  </h1>
-                  <h4 className="mb-4 italic text-white font-primary text-mimi-shadow">
-                     (1 - 10)
-                  </h4>
+                  <div className="text-center">
+                     <h1 className="mb-2 text-xl text-white font-primary text-mimi-shadow">
+                        Valora el esfuero percibido
+                     </h1>
+                     <h4 className="mb-4 italic text-white font-primary text-mimi-shadow">
+                        (1 - 10)
+                     </h4>
+                  </div>
                   <input
                      className="w-full h-6 font-semibold text-center text-white bg-transparent border-b-2 rounded font-primary border-orange-mimi"
                      type="number"
