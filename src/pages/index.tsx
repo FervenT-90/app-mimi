@@ -4,12 +4,13 @@ import MainLayout from '../layouts/main';
 import startScreen from '../assets/svgs/gettingStarted.min.svg';
 import Header from '../components/dashboard/Header';
 import Footer from '../components/dashboard/Footer';
-const Main: FC = () => {
+
+const Main = ({ location }) => {
    return (
       <MainLayout>
-         <Header />
+         <Header location={location} />
          <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="mb-10 text-4xl text-white-mimi animation font-primary text-mimi-shadow">
+            <h1 className="mb-10 text-4xl text-white animation font-primary text-mimi-shadow">
                Bienvenido
             </h1>
 
@@ -21,7 +22,7 @@ const Main: FC = () => {
                comienza ya
             </Link>
          </div>
-         <Footer />
+         <Footer location={location} />
       </MainLayout>
    );
 };

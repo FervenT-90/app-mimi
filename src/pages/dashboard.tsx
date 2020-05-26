@@ -28,12 +28,15 @@ const Dashboard = ({ location }) => {
    return (
       <MainLayout>
          <div className="flex flex-col max-h-screen">
-            <Header showLogin={showLogin} />
+            <Header showLogin={showLogin} location={location} />
             <div className="flex flex-1 w-screen pt-20">
                <Router>
                   <PrivateRoute path="dashboard/join" component={Join} />
                   <PrivateRoute path="dashboard/profile" component={Profile} />
-                  <PrivateRoute path="dashboard/workouts" component={Workouts} />
+                  <PrivateRoute
+                     path="dashboard/workouts"
+                     component={Workouts}
+                  />
                   <PrivateRoute
                      path="dashboard/settings"
                      component={Settings}
@@ -41,7 +44,7 @@ const Dashboard = ({ location }) => {
                   <Login path="dashboard/login" showLogin={showLogin} />
                </Router>
             </div>
-            <Footer />
+            <Footer location={location} />
             <IdentityModal
                showDialog={isDialogVisible}
                onCloseDialog={() => setIsDialogVisible(false)}

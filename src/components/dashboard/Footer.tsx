@@ -5,11 +5,15 @@ import myWorkoutsSvg from '../../assets/svgs/myWorkouts.min.svg';
 import settingsSvg from '../../assets/svgs/settings.min.svg';
 import joinSvg from '../../assets/svgs/join.min.svg';
 
-const Footer: FC = () => {
+interface Props {
+   location: any;
+}
+
+const Footer: FC<Props> = ({ location }) => {
    const identity = useIdentityContext();
    const isLoggedIn = identity && identity.isLoggedIn;
 
-   return identity && isLoggedIn ? (
+   return identity && isLoggedIn && location.pathname !== '/' ? (
       <div className="fixed bottom-0 left-0 right-0 w-screen">
          <nav className="flex items-center justify-around h-16 text-white-mimi border-t-4 bg-black-mimi font-secondary border-orange-mimi">
             <Link
