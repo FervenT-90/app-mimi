@@ -1,13 +1,14 @@
-import React, { FC, MouseEvent, useState, useEffect, useRef } from 'react';
+import React, { FC, MouseEvent, useState, useEffect } from 'react';
 import { apolloService } from '../../../services/apolloService';
 import { Day } from '../../../apollo/utils/faunaTypes';
 import { useMutation } from '@apollo/react-hooks';
 import { mutations } from '../../../apollo/utils/mutations/';
 import { joinSVGs } from '../../../assets/svgs';
-import Carousel from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 import Load from '../../Load';
 import Error from '../../Error';
+import Carousel from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+
 const initialDay: Day = {
    _id: null,
    month: null,
@@ -15,6 +16,7 @@ const initialDay: Day = {
    number: null,
    adminWorkouts: null,
 };
+
 let carouselRef = React.createRef();
 
 export const Join: FC = () => {

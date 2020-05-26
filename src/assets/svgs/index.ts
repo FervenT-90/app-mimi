@@ -15,6 +15,10 @@ import vacanciesDisabled from './vacanciesDisabled.min.svg';
 import workoutFull from './workoutFull.min.svg';
 import workoutTime from './workoutTime.min.svg';
 import workoutTimeDisabled from './workoutTimeDisabled.min.svg';
+import doneRating from './doneRating.min.svg';
+import rating from './rating.min.svg';
+import doneWorkout from './doneWorkout.min.svg';
+import doneWorkoutSmall from './doneWorkoutSmall.min.svg';
 
 export const joinSVGs = {
    workoutTime,
@@ -25,4 +29,11 @@ export const joinSVGs = {
    cancelWorkout,
    joinWorkout,
    joinWorkoutDisabled,
+};
+
+export const workoutsSVGs = {
+   doneWorkoutSmall,
+   workoutTime,
+   doneRating,
+   rating,
 };
