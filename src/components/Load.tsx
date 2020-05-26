@@ -5,7 +5,7 @@ const Load: FC = () => {
       <div className="flex flex-col items-center justify-center w-screen h-screen bg-opacity-75 bg-black-mimi">
          <img className="pb-12 spin-animation" src={mimiLogo} alt="" />
          <div>
-            <h1 className="mb-48 text-2xl text-white font-primary">
+            <h1 className="mb-48 text-2xl text-white-mimi font-primary">
                Loading<span className="blink">.</span>
                <span className="blink">.</span>
                <span className="blink">.</span>

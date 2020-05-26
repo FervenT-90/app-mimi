@@ -32,7 +32,7 @@ const Header: FC<Props> = ({ showLogin }) => {
                src={profileButton}
                alt="Profile Button"
             />
-            <span className="text-white">{name}</span>
+            <span className="text-white-mimi">{name}</span>
          </Link>
 
          <button onClick={showLogin}>

@@ -158,7 +158,7 @@ export const Join: FC = () => {
                >
                   <button
                      id={day._id}
-                     className="flex flex-col items-center px-6 text-white text-mimi-shadow font-primary focus:outline-none"
+                     className="flex flex-col items-center px-6 text-white-mimi text-mimi-shadow font-primary focus:outline-none"
                      key={day._id}
                      value={index}
                      onClick={handleDayClick}
@@ -170,12 +170,12 @@ export const Join: FC = () => {
             ))}
          </Carousel>
 
-         <p className="pt-32 text-5xl text-center text-white font-primary text-mimi-shadow">
+         <p className="pt-32 text-5xl text-center text-white-mimi font-primary text-mimi-shadow">
             {monthName}
          </p>
          {/* Preguntar a RAUL como solventar este error */}
          {selectedDay && selectedDay.name && selectedDay.number && (
-            <p className="mb-5 text-2xl text-center text-white font-primary text-mimi-shadow">
+            <p className="mb-5 text-2xl text-center text-white-mimi font-primary text-mimi-shadow">
                {selectedDay.name} {selectedDay.number}
             </p>
          )}
@@ -193,7 +193,7 @@ export const Join: FC = () => {
                         return (
                            <div
                               key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 text-white bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
                            >
                               <div className="flex items-center ">
                                  <img
@@ -279,9 +279,9 @@ export const Join: FC = () => {
                         return (
                            <div
                               key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 text-gray-500 bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
                            >
-                              <div className="flex items-center ">
+                              <div className="flex items-center">
                                  <img
                                     className="w-5 h-5 mr-2"
                                     src={joinSVGs.workoutTime}
@@ -323,7 +323,7 @@ export const Join: FC = () => {
                         return (
                            <div
                               key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 text-white bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
                            >
                               <div className="flex items-center ">
                                  <img
@@ -404,7 +404,7 @@ export const Join: FC = () => {
                      return (
                         <div
                            key={adminWorkout._id}
-                           className="flex items-center justify-between w-screen p-3 mb-1 text-gray-500 bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                           className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
                         >
                            <div className="flex items-center ">
                               <img
@@ -452,7 +452,7 @@ export const Join: FC = () => {
                         return (
                            <div
                               key={adminWorkout._id}
-                              className="flex items-center justify-between w-screen p-3 mb-1 text-white bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                              className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-white-mimi bg-black-mimi md:w-1/2 font-primary"
                            >
                               <div className="flex items-center ">
                                  <img
@@ -522,7 +522,7 @@ export const Join: FC = () => {
                      return (
                         <div
                            key={adminWorkout._id}
-                           className="flex items-center justify-between w-screen p-3 mb-1 text-gray-500 bg-opacity-50 bg-black-mimi md:w-1/2 font-primary"
+                           className="flex items-center justify-between w-screen p-3 mb-1 bg-opacity-50 text-mimi-disabled bg-black-mimi md:w-1/2 font-primary"
                         >
                            <div className="flex items-center ">
                               <img

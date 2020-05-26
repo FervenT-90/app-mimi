@@ -9,13 +9,13 @@ const Main: FC = () => {
       <MainLayout>
          <Header />
          <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="mb-10 text-4xl text-white animation font-primary text-mimi-shadow">
+            <h1 className="mb-10 text-4xl text-white-mimi animation font-primary text-mimi-shadow">
                Bienvenido
             </h1>
 
             <img src={startScreen} alt="welcome svg" />
             <Link
-               className="px-6 py-1 mt-20 font-semibold tracking-wider text-white uppercase rounded shadow bg-green-mimi focus:outline-none focus:underline"
+               className="px-6 py-1 mt-20 font-semibold tracking-wider uppercase rounded shadow text-white-mimi bg-green-mimi focus:outline-none focus:underline"
                to="/dashboard"
             >
                comienza ya

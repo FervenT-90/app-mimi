@@ -17,11 +17,11 @@ export const Login: FC<Props> = ({ showLogin }) => {
          <div className="mt-32">
             <img src={loginApp} alt="Login App Image" />
          </div>
-         <p className="pt-6 text-2xl text-center text-white text-mimi-shadow font-primary">
+         <p className="pt-6 text-2xl text-center text-white-mimi text-mimi-shadow font-primary">
             Empieza a formar parte de nuestro equipo
          </p>
          <button
-            className="px-6 py-1 mt-6 font-semibold tracking-wider text-white uppercase rounded shadow bg-green-mimi focus:outline-none focus:underline"
+            className="px-6 py-1 mt-6 font-semibold tracking-wider text-white-mimi uppercase rounded shadow bg-green-mimi focus:outline-none focus:underline"
             onClick={showLogin}
          >
             Log In
