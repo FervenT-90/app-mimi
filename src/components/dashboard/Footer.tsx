@@ -14,8 +14,11 @@ const Footer: FC<Props> = ({ location }) => {
    const isLoggedIn = identity && identity.isLoggedIn;
 
    return identity && isLoggedIn && location.pathname !== '/' ? (
-      <div className="fixed bottom-0 left-0 right-0 w-screen">
-         <nav className="flex items-center justify-around h-16 text-white-mimi border-t-4 bg-black-mimi font-secondary border-orange-mimi">
+      <div
+         id="dashboardFooter"
+         className="fixed bottom-0 left-0 right-0 w-screen"
+      >
+         <nav className="flex items-center justify-around h-16 border-t-4 text-white-mimi bg-black-mimi font-secondary border-orange-mimi">
             <Link
                className="pb-1"
                to="/dashboard/join"
@@ -40,7 +43,10 @@ const Footer: FC<Props> = ({ location }) => {
          </nav>
       </div>
    ) : (
-      <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-16 text-white-mimi border-t-4 bg-black-mimi font-secondary border-orange-mimi">
+      <div
+         id="homeFooter"
+         className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-16 border-t-4 text-white-mimi bg-black-mimi font-secondary border-orange-mimi"
+      >
          <p>Made with 💜 by MiMi</p>
       </div>
    );
