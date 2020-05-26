@@ -23,7 +23,7 @@ module.exports = {
       {
          resolve: `gatsby-plugin-favicon`,
          options: {
-            logo: './src/assets/gatsby-icon.png',
+            logo: './src/assets/images/gatsby-icon.png',
             icons: {
                android: true,
                appleIcon: true,
