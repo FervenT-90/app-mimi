@@ -145,7 +145,7 @@ export const Join: FC = () => {
    };
 
    // TODO: use current day || Finished field of adminWorkout
-   const today = 5;
+   const today = 6;
    let isDayPast = selectedDay.number < today;
 
    return (
