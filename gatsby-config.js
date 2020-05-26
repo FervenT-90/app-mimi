@@ -20,5 +20,21 @@ module.exports = {
             ],
          },
       },
+      {
+         resolve: `gatsby-plugin-favicon`,
+         options: {
+            logo: './src/assets/gatsby-icon.png',
+            icons: {
+               android: true,
+               appleIcon: true,
+               appleStartup: true,
+               coast: false,
+               favicons: true,
+               firefox: true,
+               yandex: false,
+               windows: false,
+            },
+         },
+      },
    ],
 };
