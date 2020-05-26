@@ -12,6 +12,8 @@ module.exports = {
             'orange-mimi': '#FE9C42',
             'violet-mimi': '#7E21F5',
             'green-mimi': '#46BA3C',
+            'white-mimi': '#FFF2DF ',
+            'mimi-disabled': '#968E7D',
          },
       },
    },
