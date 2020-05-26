@@ -13,8 +13,8 @@ export const Login: FC<Props> = ({ showLogin }) => {
       navigate('/dashboard/join', { replace: true });
    }
    return (
-      <div className="flex flex-col items-center justify-center flex-1 w-screen h-screen">
-         <div className="-mt-32">
+      <div className="flex flex-col items-center justify-center flex-1 w-screen">
+         <div className="mt-32">
             <img src={loginApp} alt="Login App Image" />
          </div>
          <p className="pt-6 text-2xl text-center text-white text-mimi-shadow font-primary">

@@ -180,7 +180,7 @@ export const Join: FC = () => {
 
          {isDayBooked ? (
             // SI estamos en un dia en el que el usuario tiene un workout reservado.
-            <div className="mt-10">
+            <div className="mt-10 md:w-screen md:flex md:flex-col md:justify-center md:items-center">
                {areAdminWorkoutsLoaded &&
                   selectedDay.adminWorkouts.data.map((adminWorkout) => {
                      // Si el workout tiene disponibilidad y SI es el que el usuario tiene reservado
