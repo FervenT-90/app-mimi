@@ -16,7 +16,7 @@
     "@reach/visually-hidden": "^0.10.2",
     "gatsby": "2.21.22",
     "gatsby-plugin-postcss": "2.3.1",
-    "gatsby-plugin-sharp": "2.6.2",
+    "gatsby-plugin-sharp": "4.25.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-netlify-identity": "^0.2.5",
